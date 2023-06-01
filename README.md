@@ -1,7 +1,7 @@
 # DSA_Simplied_PS2
 Repo contains best DSA concepts and practices I have been doing
 
-_____________________________Plans for the month__________________
+Plans for the month
 
 1. Graph
   1. theory

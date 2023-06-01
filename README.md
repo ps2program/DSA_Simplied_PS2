@@ -3,15 +3,8 @@ Repo contains best DSA concepts and practices I have been doing
 
 Plans for the month
 
-1. Graph
-  1. theory
-  2. DFS and BFS
-  3. Questions
+1. Graph ->theory, DFS and BFS, Questions
  
-2. Tress
-  1. Theory
-  2. other... update later on
+2. Tress -> Theory, other... update later on
   
-3. Linked List
-  1. Theory
-  2. others... update later on
+3. Linked List -> Theory, others... update later on

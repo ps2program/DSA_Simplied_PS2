@@ -38,7 +38,8 @@ ________________________________________________________________________________
 
 _________________________________________________________________________________________________________________
 
-4. Graph Algos Implementation => DFS and BFS
+4. Graph Algos Implementation => DFS and BFS - Lesson Video Link - https://youtube.com/clip/Ugkxexr2vqNJA0SI6TkKnMZ6rRFy5SKKR2NJ
+
   (i) Depth First Search
     Follow the below method to implement DFS traversal.
 
@@ -65,6 +66,8 @@ ________________________________________________________________________________
       Step 4: Add the starting vertex to the visited array, and afterward, you add v1’s adjacent vertices to the queue data structure.
       Step 5: Now using the FIFO concept, remove the first element from the queue, put it into the visited array, and then add the adjacent vertices of the removed element to the queue.
       Step 6: Repeat step 5 until the queue is not empty and no vertex is left to be visited.
+      
+      
 
 
 

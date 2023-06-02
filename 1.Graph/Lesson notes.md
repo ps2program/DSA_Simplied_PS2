@@ -154,6 +154,26 @@ breadthFirstPrint(graph,'a')
 ```
 
 
+```js
+function bfsRecursive(graph, start, visited = new Set(), queue = []) {
+  visited.add(start);
+  console.log(start);
+
+  for (let neighbor of graph[start]) {
+    if (!visited.has(neighbor)) {
+      visited.add(neighbor);
+      queue.push(neighbor);
+    }
+  }
+
+  if (queue.length > 0) {
+    let nextNode = queue.shift();
+    bfsRecursive(graph, nextNode, visited, queue);
+  }
+}
+```
+
+
 
       
 

@@ -31,6 +31,37 @@ const hasPathDFS = (graph, src, dst)=>{
 
 hasPathDFS(graph, 'f', 'h')
 
+//__________________________________________________________________________________________________________________________________
+
+//DFS with iterative way
+const hasPathDFSIterative = (graph,src,dst)=>{
+
+    // default ds for DFS is stack
+    let stack = [src];
+
+    // main algo. travel through each node(current) and check the neighbors of current and check if the current's neighbor is destination.
+    //do it till the end of the stack
+
+    while (stack.length > 0) {
+        const current = stack.pop();
+
+        //base condition
+        if (current === dst)
+                return true;
+        
+        for (let neighbor of graph[current]) {
+            stack.push(neighbor);
+        }
+        
+    }
+
+    return false;
+
+}
+
+hasPathDFSIterative(graph, 'f', 'h')
+//__________________________________________________________________________________________________________________________________
+
 
 // based on BFS and iterative
 const hasPathBFS = (graph, src, dst) =>{
@@ -53,6 +84,7 @@ const hasPathBFS = (graph, src, dst) =>{
 }
 
 hasPathBFS(graph, 'f', 'h')
+//__________________________________________________________________________________________________________________________________
 
 /**
 n = # nodes

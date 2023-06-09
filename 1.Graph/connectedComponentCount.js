@@ -46,4 +46,24 @@ const explore = (graph,current,visited)=>{
     return true;
 }
 
+
+// alternate explore function using DFS iterative.
+const exploreDFSIterative = (graph,current,visited)=>{
+    let stack = [current];
+
+    while (stack.length > 0) {
+        const newCurrent = stack.pop();
+
+        for (let neighbor of graph[newCurrent]) {
+            if (visited.has(newCurrent)) {
+                return false;
+            }
+            visited.add(String(neighbor));
+            stack.push(String(neighbor));
+        }
+
+     return true;
+    }
+}
+
 connectecComponentcount(graph)

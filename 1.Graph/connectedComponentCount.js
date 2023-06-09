@@ -50,20 +50,39 @@ const explore = (graph,current,visited)=>{
 // alternate explore function using DFS iterative.
 const exploreDFSIterative = (graph,current,visited)=>{
     let stack = [current];
+ 
+    if (visited.has(String(current)))
+        return false;
 
     while (stack.length > 0) {
         const newCurrent = stack.pop();
 
         for (let neighbor of graph[newCurrent]) {
-            if (visited.has(newCurrent)) {
-                return false;
-            }
+
             visited.add(String(neighbor));
             stack.push(String(neighbor));
         }
 
-     return true;
+        return true;
     }
+}
+
+// alternate explore function using BFS iterative.
+const exploreBFS = (graph,current,visited)=>{
+    let queue = [current];
+    if (visited.has(String(current)))
+        return false;
+
+    while (queue.length > 0) {
+        const newCurrent = queue.shift();
+
+        for (let neighbor of graph[newCurrent]) {
+            queue.push(neighbor);
+            visited.add(String(neighbor));
+        }
+        return true;
+    }
+
 }
 
 connectecComponentcount(graph)
